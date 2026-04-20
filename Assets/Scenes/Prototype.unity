@@ -293,8 +293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleObjectPool
   obstacleBarrelPrefab: {fileID: 151586, guid: 95927758d3a4cef4ba6c4318f06876fd, type: 3}
-  obstacleBarrierPrefab: {fileID: 181666, guid: ee7d0c4ddd804dd4e95f705d43c9135e, type: 3}
-  obstacleStoneWallPrefab: {fileID: 1574251093279545299, guid: aa7a79e53bee7d64e9b1fb9894a773a5, type: 3}
+  obstacleBarrierPrefab: {fileID: 2633185289033627233, guid: 55c4d518f547f354593df5f2bfc29c6e, type: 3}
+  obstacleStoneWallPrefab: {fileID: 3731275314154615668, guid: 182b67e2f2a41e846ad3686afe4aca81, type: 3}
   poolSize: 10
 --- !u!4 &255484002
 Transform:
@@ -522,6 +522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveLeft
   speed: 10
+  obstacleType: 0
 --- !u!65 &835818924
 BoxCollider:
   m_ObjectHideFlags: 0

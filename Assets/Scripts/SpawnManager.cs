@@ -20,10 +20,25 @@ public class SpawnManager : MonoBehaviour
             return;
         }
 
-        Instantiate(
-            obstaclePrefab,
+        //Instantiate(
+        //    obstaclePrefab,
+        //    spawnPoint.position,
+        //    obstaclePrefab.transform.rotation);
+
+        int randomType = Random.Range(1, 4);
+
+        var obstacle = ObstacleObjectPool.staticInstance.Acquire(randomType);
+        obstacle.transform.SetPositionAndRotation(
             spawnPoint.position,
-            obstaclePrefab.transform.rotation
+            spawnPoint.rotation
         );
+
+        MoveLeft moveLeft = obstacle.GetComponent<MoveLeft>();
+        if (moveLeft != null)
+        {
+            moveLeft.speed = 10f;
+            moveLeft.obstacleType = randomType;
+        }
+
     }
 }
